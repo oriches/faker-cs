@@ -18,7 +18,8 @@ Supported versions:
 	.NET framework 4.6,
 	.NET framework 4.7,
 	.NET Standard 2.0
-
+	.NET Standard 2.1
+	
 No longer supported in nuGet package (1.1 going forward), code still exists in repo.
 
 	Silverlight 3.0,
