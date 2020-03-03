@@ -59,7 +59,8 @@ namespace Faker
             groups.AddRange(Enumerable.Range(10, 99).Where(z => z % 2 == 0));
             groups.AddRange(Enumerable.Range(2, 9).Where(z => z % 2 == 0));
             groups.AddRange(Enumerable.Range(11, 99).Where(z => z % 2 == 1));
-            var group = groups.Where(z => z < 100).ElementAt(RandomNumber.Next(0, groups.Count));
+            groups = groups.Where(z => z < 100).ToList();
+            var group = groups.ElementAt(RandomNumber.Next(0, groups.Count));
             var serial = RandomNumber.Next(1, 9999);
             var ssn = $"{area:000}-{group:00}-{serial:0000}";
             return !dashFormat ? ssn.Replace("-", "") : ssn;
