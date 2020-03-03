@@ -10,7 +10,7 @@ namespace Faker.Tests
         public void should_return_an_isin()
         {
             var isin = Finance.Isin();
-
+            Console.WriteLine($@"ISIN=[{isin}]");
             Assert.That(isin, Is.Not.Empty);
             Assert.That(isin.Length, Is.EqualTo(12));
         }
@@ -19,7 +19,7 @@ namespace Faker.Tests
         public void should_return_a_ticker()
         {
             var ticker = Finance.Ticker();
-
+            Console.WriteLine($@"Ticker=[{ticker}]");
             Assert.That(ticker, Is.Not.Empty);
         }
 
@@ -27,7 +27,7 @@ namespace Faker.Tests
         public void should_return_a_coupon()
         {
             var coupon = Finance.Coupon();
-
+            Console.WriteLine($@"Coupon=[{coupon}]");
             Assert.That(coupon, Is.GreaterThan(0));
         }
 
@@ -54,7 +54,7 @@ namespace Faker.Tests
         public void should_return_a_credit_bond_name()
         {
             var bondName = Finance.Credit.BondName();
-            
+            Console.WriteLine($@"BondName=[{bondName}]");
             Assert.That(bondName, Is.Not.Empty);
         }
 
@@ -62,7 +62,7 @@ namespace Faker.Tests
         public void should_return_a_credit_bond()
         {
             var bond = Finance.Credit.BondClass();
-            
+            Console.WriteLine($@"Bond=[{bond}]");
             Assert.That(bond, Is.Not.Null);
         }
     }
