@@ -20,7 +20,7 @@ namespace Faker.Tests
         public void Should_Get_MilitaryStateAbbr()
         {
             var address = Address.UsMilitaryStateAbbr();
-            Console.WriteLine($@"Name=[{address}]");
+            Console.WriteLine($@"UsMilitaryStateAbbr=[{address}]");
             Assert.IsTrue(address.StartsWith("A", StringComparison.CurrentCultureIgnoreCase));
         }
 
@@ -28,7 +28,7 @@ namespace Faker.Tests
         public void Should_Get_MilitaryState()
         {
             var address = Address.UsMilitaryState();
-            Console.WriteLine($@"Name=[{address}]");
+            Console.WriteLine($@"UsMilitaryState=[{address}]");
             Assert.IsTrue(address.StartsWith("Armed", StringComparison.CurrentCultureIgnoreCase));
         }
 
@@ -36,7 +36,7 @@ namespace Faker.Tests
         public void Should_Get_Street_Address()
         {
             var address = Address.StreetAddress();
-            Console.WriteLine($@"Address=[{address}]");
+            Console.WriteLine($@"StreetAddress=[{address}]");
             Assert.IsTrue(Regex.IsMatch(address, "^[0-9]{3,5} [A-Z][a-z]+ [A-Z][a-z]+$"));
         }
 
@@ -44,7 +44,7 @@ namespace Faker.Tests
         public void Should_Get_Street_Address_With_Secondary_Address()
         {
             var address = Address.StreetAddress(true);
-            Console.WriteLine($@"Address=[{address}]");
+            Console.WriteLine($@"StreetAddress=[{address}]");
             Assert.IsTrue(Regex.IsMatch(address, @"^[0-9]{3,5} [A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+\.? [0-9]{3}$"));
         }
     }

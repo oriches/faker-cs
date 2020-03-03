@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 using NUnit.Framework;
 
 namespace Faker.Tests
@@ -10,6 +11,8 @@ namespace Faker.Tests
         public void Should_Create_Email_Address()
         {
             var email = Internet.Email();
+            Console.WriteLine($@"Email=[{email}]");
+
             Assert.IsTrue(Regex.IsMatch(email, @".+@.+\.\w+"));
         }
 
@@ -17,6 +20,8 @@ namespace Faker.Tests
         public void Should_Create_Email_Address_From_Given_Name()
         {
             var email = Internet.Email("Bob Smith");
+            Console.WriteLine($@"Email=[{email}]");
+
             Assert.IsTrue(Regex.IsMatch(email, @"bob[_\.]smith@.+\.\w+"));
         }
 
@@ -24,6 +29,8 @@ namespace Faker.Tests
         public void Should_Create_Free_Email()
         {
             var email = Internet.FreeEmail();
+            Console.WriteLine($@"Email=[{email}]");
+
             Assert.IsTrue(Regex.IsMatch(email, @".+@(gmail|hotmail|yahoo)\.com"));
         }
 
@@ -31,6 +38,8 @@ namespace Faker.Tests
         public void Should_Create_User_Name()
         {
             var username = Internet.UserName();
+            Console.WriteLine($@"UserName=[{username}]");
+
             Assert.IsTrue(Regex.IsMatch(username, @"[a-z]+((_|\.)[a-z]+)?"));
         }
 
@@ -38,6 +47,8 @@ namespace Faker.Tests
         public void Should_Create_User_Name_From_Given_Name()
         {
             var username = Internet.UserName("Bob Smith");
+            Console.WriteLine($@"UserName=[{username}]");
+
             Assert.IsTrue(Regex.IsMatch(username, @"bob[_\.]smith"));
         }
 
@@ -45,6 +56,8 @@ namespace Faker.Tests
         public void Should_Get_Domain_Name()
         {
             var domain = Internet.DomainName();
+            Console.WriteLine($@"DomainName=[{domain}]");
+
             Assert.IsTrue(Regex.IsMatch(domain, @"\w+\.\w+"));
         }
 
@@ -52,6 +65,8 @@ namespace Faker.Tests
         public void Should_Get_Domain_Word()
         {
             var word = Internet.DomainWord();
+            Console.WriteLine($@"DomainWord=[{word}]");
+
             Assert.IsTrue(Regex.IsMatch(word, @"^\w+$"));
         }
 
@@ -59,6 +74,8 @@ namespace Faker.Tests
         public void Should_Get_Domain_Suffix()
         {
             var suffix = Internet.DomainSuffix();
+            Console.WriteLine($@"DomainSuffix=[{suffix}]");
+
             Assert.IsTrue(Regex.IsMatch(suffix, @"^\w+(\.\w+)?"));
         }
     }

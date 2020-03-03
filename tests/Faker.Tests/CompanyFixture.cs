@@ -13,6 +13,7 @@ namespace Faker.Tests
         public void Should_Generate_Company_Name()
         {
             var name = Company.Name();
+            Console.WriteLine($@"Name=[{name}]");
 
             Console.WriteLine($@"Name=[{name}]");
             // Name should match one of the given formats
@@ -29,7 +30,7 @@ namespace Faker.Tests
         {
             var catchPhrase = Company.CatchPhrase();
             Console.WriteLine($@"CatchPhrase=[{catchPhrase}]");
-            Assert.IsTrue(Regex.IsMatch(catchPhrase, @"[\w\-]+ [\w\-]+ [\w\-]+"));
+            Assert.IsTrue(Regex.IsMatch(catchPhrase, @"[\w\-\/]+ [\w\-\/]+ [\w\-\/]+"));
         }
 
         [Test]
@@ -37,7 +38,7 @@ namespace Faker.Tests
         {
             var bs = Company.BS();
             Console.WriteLine($@"BS=[{bs}]");
-            Assert.IsTrue(Regex.IsMatch(bs, @"[\w\-]+ [\w\-]+ [\w\-]+"));
+            Assert.IsTrue(Regex.IsMatch(bs, @"[\w\-\/]+ [\w\-\/]+ [\w\-\/]+"));
         }
     }
 }
