@@ -46,7 +46,7 @@ namespace Faker
 
         public static string SocialSecurityNumber(bool dashFormat = true)
         {
-            var area = RandomNumber.Next(0, 650);
+            var area = RandomNumber.Next(1, 650);
 
             /*
             Odd numbers, 01 to 09
@@ -60,7 +60,7 @@ namespace Faker
             groups.AddRange(Enumerable.Range(2, 9).Where(z => z % 2 == 0));
             groups.AddRange(Enumerable.Range(11, 99).Where(z => z % 2 == 1));
             var group = groups.Where(z => z < 100).ElementAt(RandomNumber.Next(0, groups.Count));
-            var serial = RandomNumber.Next(1, 10000);
+            var serial = RandomNumber.Next(1, 9999);
             var ssn = $"{area:000}-{group:00}-{serial:0000}";
             return !dashFormat ? ssn.Replace("-", "") : ssn;
         }
