@@ -14,6 +14,7 @@ namespace Faker.Tests
         {
             var name = Company.Name();
 
+            Console.WriteLine($@"Name=[{name}]");
             // Name should match one of the given formats
             Assert.IsTrue(new List<Func<bool>>
                               {
@@ -27,6 +28,7 @@ namespace Faker.Tests
         public void Should_Generate_Catchphrase()
         {
             var catchPhrase = Company.CatchPhrase();
+            Console.WriteLine($@"CatchPhrase=[{catchPhrase}]");
             Assert.IsTrue(Regex.IsMatch(catchPhrase, @"[\w\-]+ [\w\-]+ [\w\-]+"));
         }
 
@@ -34,6 +36,7 @@ namespace Faker.Tests
         public void Should_Generate_Bs()
         {
             var bs = Company.BS();
+            Console.WriteLine($@"BS=[{bs}]");
             Assert.IsTrue(Regex.IsMatch(bs, @"[\w\-]+ [\w\-]+ [\w\-]+"));
         }
     }

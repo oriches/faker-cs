@@ -20,6 +20,7 @@ namespace Faker.Tests
         public void Should_Get_MilitaryStateAbbr()
         {
             var address = Address.UsMilitaryStateAbbr();
+            Console.WriteLine($@"Name=[{address}]");
             Assert.IsTrue(address.StartsWith("A", StringComparison.CurrentCultureIgnoreCase));
         }
 
@@ -27,6 +28,7 @@ namespace Faker.Tests
         public void Should_Get_MilitaryState()
         {
             var address = Address.UsMilitaryState();
+            Console.WriteLine($@"Name=[{address}]");
             Assert.IsTrue(address.StartsWith("Armed", StringComparison.CurrentCultureIgnoreCase));
         }
 
@@ -35,7 +37,6 @@ namespace Faker.Tests
         {
             var address = Address.StreetAddress();
             Console.WriteLine($@"Address=[{address}]");
-
             Assert.IsTrue(Regex.IsMatch(address, "^[0-9]{3,5} [A-Z][a-z]+ [A-Z][a-z]+$"));
         }
 
@@ -44,7 +45,6 @@ namespace Faker.Tests
         {
             var address = Address.StreetAddress(true);
             Console.WriteLine($@"Address=[{address}]");
-
             Assert.IsTrue(Regex.IsMatch(address, @"^[0-9]{3,5} [A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+\.? [0-9]{3}$"));
         }
     }
