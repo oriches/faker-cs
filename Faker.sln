@@ -32,7 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faker.Tests.Net.4.8", "test
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuGet", "nuGet", "{513FC2C7-5B17-43BC-BAFD-4FC820800E33}"
 	ProjectSection(SolutionItems) = preProject
-		Faker.Net.nuspec = Faker.Net.nuspec
+		Faker.Net-Seed.nuspec = Faker.Net-Seed.nuspec
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faker.Net.5.0", "src\Faker.Net.5.0\Faker.Net.5.0.csproj", "{B67E47FB-0064-4705-84C7-D8E6F8241CC2}"
@@ -40,6 +41,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faker.Tests.Net.5.0", "tests\Faker.Tests.Net.5.0\Faker.Tests.Net.5.0.csproj", "{5E0FC59C-B443-4946-99FD-5EFC5DCFB149}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faker.Tests.Net.4.0", "tests\Faker.Tests.Net.4.0\Faker.Tests.Net.4.0.csproj", "{15B2EBF6-B443-412A-883F-0FE6D634A4FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0B09456B-969A-4F8B-9142-66424CFA25DA}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

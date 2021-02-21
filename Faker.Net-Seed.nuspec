@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
-    <id>Faker.Net</id>
+    <id>Faker.Net-Seed</id>
     <version>1.0</version>
-    <authors>Ben Smith,Ollie Riches,Robin Michael</authors>
-    <owners>Ben Smith,Ollie Riches,Robin Michael</owners>
+    <authors>Tilli uTILLIty Weissenberger,Ben Smith,Ollie Riches,Robin Michael</authors>
+    <owners>Tilli uTILLIty Weissenberger,Ben Smith,Ollie Riches,Robin Michael</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectUrl>https://github.com/oriches/faker-cs</projectUrl>
-    <description>C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easily generate fake data: names, addresses, phone numbers, etc.</description>
+    <projectUrl>https://github.com/utillity/faker-cs</projectUrl>
+    <description>C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easily generate fake data: names, addresses, phone numbers, etc. This fork allows setting a fixed seed to generate constant, but random database seeding data usable in unit-testing</description>
     <summary>C# port of the Ruby Faker gem (http://faker.rubyforge.org/)</summary>
-    <copyright>Ben Smith, Ollie Riches, Robin Michael 2020</copyright>
-    <tags>Faker, Testing, TDD, .Net, .Net Standard, .Net Core</tags>
+    <copyright>Tilli uTILLIty Weissenberger, Ben Smith, Ollie Riches, Robin Michael 2021</copyright>
+    <tags>Faker, Testing, TDD, Seeding, .Net, .Net Standard, .Net Core</tags>
     <dependencies>
       <group targetFramework=".NETStandard2.0">
         <dependency id="NETStandard.Library" version="2.0.3" />
@@ -28,7 +28,7 @@
     <file src="src\Faker.Net.4.7\bin\Release\Faker.Net.4.7.dll" target="lib\net472\Faker.Net.4.7.dll" />
     <file src="src\Faker.Net.4.8\bin\Release\de-DE\Faker.Net.4.8.resources.dll" target="lib\net48\de-DE\Faker.Net.4.8.resources.dll" />
     <file src="src\Faker.Net.4.8\bin\Release\Faker.Net.4.8.dll" target="lib\net48\Faker.Net.4.8.dll" />
-	<file src="src\Faker.Net.5.0\bin\Release\net5.0\de-DE\Faker.Net.5.0.resources.dll" target="lib\net50\de-DE\Faker.Net.5.0.resources.dll" />
+    <file src="src\Faker.Net.5.0\bin\Release\net5.0\de-DE\Faker.Net.5.0.resources.dll" target="lib\net50\de-DE\Faker.Net.5.0.resources.dll" />
     <file src="src\Faker.Net.5.0\bin\Release\net5.0\Faker.Net.5.0.dll" target="lib\net50\Faker.Net.5.0.dll" />
     <file src="src\Faker.Net.Core.3.0\bin\Release\netcoreapp3.0\de-DE\Faker.Net.Core.3.0.resources.dll" target="lib\netcoreapp3.0\de-DE\Faker.Net.Core.3.0.resources.dll" />
     <file src="src\Faker.Net.Core.3.0\bin\Release\netcoreapp3.0\Faker.Net.Core.3.0.dll" target="lib\netcoreapp3.0\Faker.Net.Core.3.0.dll" />

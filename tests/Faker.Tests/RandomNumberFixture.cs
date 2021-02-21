@@ -36,6 +36,24 @@ namespace Faker.Tests
         }
 
         [Test]
+        public void Should_Create_Same_With_Seed()
+        {
+            const int amount = 1000;
+            var expected = new int[amount];
+            RandomNumber.SetSeed(4321);
+            for (var i = 0; i < amount; i++)
+            {
+                expected[i] = RandomNumber.Next();
+            }
+            RandomNumber.SetSeed(4321);
+            for (var i = 0; i < amount; i++)
+            {
+                var actual = RandomNumber.Next();
+                Assert.AreEqual(expected[i], actual, $"Not equal at position {i}");
+            }
+        }
+
+        [Test]
         public void Should_Generate_Maximum()
         {
             var result = false;

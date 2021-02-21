@@ -20,6 +20,24 @@ namespace Faker.Tests
         }
 
         [Test]
+        public void Should_Get_FullName_Seeded()
+        {
+            const int amount = 100;
+            var expected = new string[amount];
+            RandomNumber.SetSeed(4321);
+            for (var i = 0; i < amount; i++)
+            {
+                expected[i] = Name.FullName();
+            }
+            RandomNumber.SetSeed(4321);
+            for (var i = 0; i < amount; i++)
+            {
+                var actual = Name.FullName();
+                Assert.AreEqual(expected[i], actual, $"Not equal at position {i}");
+            }
+        }
+
+        [Test]
         public void Should_Get_FullName_With_Standard_Format()
         {
             var name = Name.FullName(NameFormats.Standard);
